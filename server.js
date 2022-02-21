@@ -4,11 +4,11 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', (request, response) => {
-  response.render('index');
+  response.render('pages/index');
 });
 
 app.get('/about', (request, response) => {
-  response.render('about');
+  response.render('pages/about');
 });
 
 app.listen(8080, console.log('Runing...'));
