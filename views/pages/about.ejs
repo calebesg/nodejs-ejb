@@ -5,13 +5,32 @@
 <body>
   <%- include('../partials/header', {page: 'About'}); %>
 
-  <main>
+  <main class="container">
     <div class="jumbotron">
-      <div class="container">
-        <h1>Sobre min</h1>
-        <p>Olá eu sou Calebe Souza Guimarães.</p>
-      </div>
+      <h1>Sobre min</h1>
+      <p>Olá eu sou Calebe Souza Guimarães.</p>
+      <p><%= about.detail; %></p>
     </div>
+
+    <section>
+      <h3>Social</h3>
+      <ul class="list-group list-group-flush">
+
+        <% for(var item in about.social) { %>
+          <li class="list-group-item list-group-item-primary">
+            <strong><%= item; %>: </strong>
+
+            <% if(item != 'email') { %>
+              <a href="<%= about.social[item]; %>" target="_blank"><%= about.social[item]; %></a>
+            <% } else { %>
+              <span><%= about.social[item]; %></span>
+            <% } %>
+
+          </li>
+        <% } %>
+
+      </ul>
+    </section>
   </main>
 
   <%- include('../partials/footer'); %>

@@ -6,22 +6,21 @@
 <body>
   <%- include('../partials/header'); %>
 
-  <main>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Node com EJS</h1>
-        <p>Aprendendo a trabalhar com EJS</p>
-        <p><%= detail;%></p>
-      </div>
+  <main class="container">
+
+    <div class="jumbotron"> 
+      <h1>Node com EJS</h1>
+      <p>Aprendendo a trabalhar com EJS</p>
+      <p><%= index.message; %></p>
     </div>
 
-    <section class="container">
+    <section>
       <h3>Guia de Tags</h3>
       <ul class="list-group list-group-flush">
 
-        <% items.forEach(item => { %>
+        <% index.tags.forEach(item => { %>
           <li class="list-group-item list-group-item-warning">
-            <strong><%= item.title; %></strong> <%= item.message; %>
+            <strong><%= item.title; %></strong> <%= item.description; %>
           </li>
         <% }); %>
 

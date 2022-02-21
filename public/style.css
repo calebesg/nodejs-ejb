@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
+header>div {
+  margin-top: 24px;
+}
+
+main {
+  margin-top: 24px;
+}
+
+.jumbotron {
+  line-height: 1rem;
+}
+
+.jumbotron p:nth-child(3) {
+  font-size: 1.6rem;
+  margin-top: 32px;
+}
+
 ul {
   list-style: none;
+}
+
+ul.list-group {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 46px;
 }
