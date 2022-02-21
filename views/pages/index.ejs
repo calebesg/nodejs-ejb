@@ -10,10 +10,23 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Node com EJS</h1>
-        <p>Vamos aprender a trabalhar com EJS</p>
+        <p>Aprendendo a trabalhar com EJS</p>
+        <p><%= detail;%></p>
       </div>
     </div>
 
+    <section class="container">
+      <h3>Guia de Tags</h3>
+      <ul class="list-group list-group-flush">
+
+        <% items.forEach(item => { %>
+          <li class="list-group-item list-group-item-warning">
+            <strong><%= item.title; %></strong> <%= item.message; %>
+          </li>
+        <% }); %>
+
+      </ul>
+    </section>
   </main>
 
   <%- include('../partials/footer'); %>
